@@ -1,0 +1,18 @@
+# == Schema Information
+# Schema version: 20141220213142
+#
+# Table name: especialidades
+#
+#  id         :integer(4)      not null, primary key
+#  nombre     :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+
+two:
+  nombre: MyString

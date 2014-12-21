@@ -1,0 +1,21 @@
+<%= form_for(@especialidad,  :html => {"data-type" => :json}) do |f| %>
+  <% if @especialidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@especialidad.errors.count, "error") %> prohibited this especialidad from being saved:</h2>
+
+      <ul>
+      <% @especialidad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :nombre, class: 'col-sm-4 control-label' %><br>
+    <div class="col-sm-8"><%= f.text_field :nombre, autocomplete: 'off' %></div>
+  </div>
+  <div class="panel-footer">
+    <button type="submit" class="btn btn-primary mr5">Guardar</button>
+    <button type="reset" class="btn btn-dark">Limpiar</button>
+  </div>
+<% end %>

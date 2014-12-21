@@ -1,0 +1,33 @@
+<%= form_for(@cita) do |f| %>
+  <% if @cita.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cita.errors.count, "error") %> prohibited this cita from being saved:</h2>
+
+      <ul>
+      <% @cita.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paciente_id %><br>
+    <%= f.select :paciente_id, Paciente.all.collect { |s| [ s.info, s.id ]}, prompt: 'Seleccione...' %>
+  </div>
+  <div class="field">
+    <%= f.label :especialista_id %><br>
+    <%= f.select :especialista_id, Especialista.all.collect { |s| [ s.info, s.id ]}, prompt: 'Seleccione...' %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.text_field :fecha, :type => 'date' %>
+  </div>
+  <div class="field">
+    <%= f.label :estatus %><br>
+    <%= f.number_field :estatus %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

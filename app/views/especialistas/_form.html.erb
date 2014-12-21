@@ -1,0 +1,41 @@
+<%= form_for(@especialista) do |f| %>
+  <% if @especialista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@especialista.errors.count, "error") %> prohibited this especialista from being saved:</h2>
+
+      <ul>
+      <% @especialista.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :especialidad_id %><br>
+    <div class="col-sm-8"><%= f.select :especialidad_id, Especialidad.all.collect { |s| [ s.nombre, s.id ]}, prompt: 'Seleccione...' %></div>
+  </div>
+  <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :nombres %><br>
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label :apellidos %><br>
+    <%= f.text_field :apellidos %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

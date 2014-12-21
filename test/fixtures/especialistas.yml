@@ -1,0 +1,33 @@
+# == Schema Information
+# Schema version: 20141220213142
+#
+# Table name: especialistas
+#
+#  id              :integer(4)      not null, primary key
+#  especialidad_id :integer(4)
+#  cedula          :string(255)
+#  nombres         :string(255)
+#  apellidos       :string(255)
+#  correo          :string(255)
+#  telefono        :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  especialidad_id: 1
+  cedula: MyString
+  nombres: MyString
+  apellidos: MyString
+  correo: MyString
+  telefono: MyString
+
+two:
+  especialidad_id: 1
+  cedula: MyString
+  nombres: MyString
+  apellidos: MyString
+  correo: MyString
+  telefono: MyString

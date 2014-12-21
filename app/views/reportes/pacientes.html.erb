@@ -1,0 +1,40 @@
+<div class="row">
+<div class="span12">
+  <div class="nonboxy-widget">
+    <div class="widget-head">
+      <h5>Pacientes Registrados</h5>
+    </div>
+    <div class="widget-content">
+      <div class="widget-box">
+      <!--comentarios aqui-->
+        <table class="table table-default table-bordered">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Cedula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Dirección</th>
+          <th>Telefono</th>
+        </tr>
+        </thead>
+       <tbody>
+         <% i = 1 %>
+         <% @pacientes.each do |paciente| %>
+           <tr>           
+              <td><%= i %></td> 
+              <td><%= paciente.cedula %></td>
+              <td><%= paciente.nombres %></td>
+              <td><%= paciente.apellidos %></td>
+              <td><%= paciente.direccion %></td>
+              <td><%= paciente.telefono %></td>
+           </tr>
+           <% i+=1 %>
+        <% end %>
+      </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+</div>

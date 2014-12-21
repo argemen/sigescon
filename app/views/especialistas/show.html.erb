@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Especialidad:</strong>
+  <%= @especialista.especialidad_id %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @especialista.cedula %>
+</p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @especialista.nombres %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @especialista.apellidos %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @especialista.correo %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @especialista.telefono %>
+</p>
+
+<%= link_to 'Edit', edit_especialista_path(@especialista) %> |
+<%= link_to 'Back', especialistas_path %>
